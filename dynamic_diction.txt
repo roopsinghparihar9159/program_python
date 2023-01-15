@@ -1,0 +1,30 @@
+
+class Student:
+    def __init__(self,title,contry,data):
+        self.title = title
+        self.contry = contry
+        self.data = data
+        print('this is a init method')
+        print(f'my name {self.title} and my roll name is {self.contry}')
+    def display(self,li):
+        my_data =[]
+        for contry in li:
+            metric_data=dict()
+            metric_data[contry] = []
+            for lebel in range(1,4):
+                user = {}
+                user["title"] = input('Enter title:')
+                user["data"] = input('Enter data:')
+                metric_data[contry].append(user)
+            my_data.append(metric_data)
+        print('This is display message',my_data)
+
+
+list_contry=['India','Iran','Iraq','Israil']
+s = Student('roop','India',10)
+
+s.display(list_contry)
+
+
+
+
